@@ -162,7 +162,7 @@ horas = datos_filtrados.loc[
 col1, col2, col3 = st.columns(3)
 
 col1.metric(
-    "Tiempo de predicción",
+    "Tiempo de predicción (en horas)",
     etiqueta_tiempo(tiempo)
 )
 
@@ -188,7 +188,7 @@ fig = px.line(
     range_y=[0, 100],
     title=(
         f"Resultados de {año:.0f} — "
-        f"Predicción con {etiqueta_tiempo(tiempo)} de anticipación"
+        f"Predicción con {etiqueta_tiempo(tiempo)} hora/horas de anticipación"
     )
 )
 
