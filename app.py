@@ -5,7 +5,7 @@ import plotly.express as px
 
 
 st.set_page_config(
-    page_title="Dashboard M2",
+    page_title="Dashboard predicción",
     page_icon="📊",
     layout="wide"
 )
@@ -124,7 +124,7 @@ año = st.selectbox(
 datos_año = df[df["Año"] == año]
 
 tiempos = sorted(
-    datos_año["Tiempo de predicción"].unique()
+    datos_año["Tiempo de predicción (en horas)"].unique()
 )
 
 tiempo = st.selectbox(
