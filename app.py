@@ -16,7 +16,7 @@ st.set_page_config(
 # ─────────────────────────────
 if not st.session_state.get("autorizado"):
 
-    st.title("Dashboard del modelo M2")
+    st.title("Dashboard de modelos de predicción")
     st.write("Ingresa la contraseña para continuar.")
 
     try:
@@ -124,11 +124,11 @@ año = st.selectbox(
 datos_año = df[df["Año"] == año]
 
 tiempos = sorted(
-    datos_año["Tiempo de predicción (en horas)"].unique()
+    datos_año["Tiempo de predicción"].unique()
 )
 
 tiempo = st.selectbox(
-    "Tiempo de predicción",
+    "Tiempo de predicción (en horas)",
     tiempos,
     format_func=etiqueta_tiempo
 )
